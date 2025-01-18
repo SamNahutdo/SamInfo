@@ -12,6 +12,6 @@ Features
 
 ⚡️ Good for Family Pictures
 
-To view the demo: 
+To view the demo: https://samnahutdo.github.io/SamInfo/
 
 License: Looking for batak mag code na babae
