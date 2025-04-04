@@ -688,3 +688,26 @@ text-align: initial;
 grid-template-columns: repeat(3, 1fr);
 }
 }
+
+
+/* add on */
+.terminal-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 185px;
+    width: 80%;
+    height: 50px;
+    z-index: 1000;
+}
+
+.terminal-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.terminal-logo img:hover {
+    transform: scale(1.1);
+}
