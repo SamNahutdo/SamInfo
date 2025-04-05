@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Nahutdo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/terminal/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/terminal/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/terminal/assets/favicon-16x16.png">
+    <link rel="manifest" href="/terminal/assets/site.webmanifest">
+    <link rel="mask-icon" href="/terminal/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/terminal/assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/terminal/assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="app" id="terminal">
+        <div class="top-bar" id="top-bar" draggable="true">           
+            <div class="buttons">
+                <span id="close" class="close"></span>
+                <span id="minimize" class="minimize"></span>
+                <span id="zoom" class="zoom"></span>
+            </div>
+            <div class="actionbuttons">
+                <div id="screenshot" class="action-button">
+                </div>
+                <div id="reset" class="action-button">
+                </div>
+            </div>
+            <div class="title" id="bar-title">sam-info.vercel.app</div>
+        </div>
+        <div class="terminal" id="terminal-body">
+            <div class="output"></div>
+            <div class="input-line">
+                <span id="prompt" class="prompt"></span>
+                <input type="text" class="input" autocomplete="off" autocorrect="off" autocapitalize="off"
+                    spellcheck="false">
+            </div>
+            <div class="output-after-input"></div>
+        </div>
+        
+
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
