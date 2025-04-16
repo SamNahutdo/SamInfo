@@ -1,170 +1,187 @@
+
+
+
+html {
+    touch-action: manipulation;
+}
+
 :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --bg: #f5f7fa;
-            --text: #333333;
-            --success: #27ae60;
-        }
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --bg: #f5f7fa;
+    --text: #333333;
+    --success: #27ae60;
+}
 
-        body {
-            background-color: var(--bg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: var(--text);
-            position: relative;
-            overflow: hidden;
-        }
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* for mobile browsers */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    touch-action: manipulation;
+}
 
-        .floating-hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 10;
-        }
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
 
-        .floating-hearts .heart {
-            position: absolute;
-            opacity: 0;
-            animation: float 6s infinite linear;
-            font-size: 24px;
-        }
+.floating-hearts .heart {
+    position: absolute;
+    opacity: 0;
+    animation: float 6s infinite linear;
+    font-size: 24px;
+}
 
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            20% { opacity: 1; }
-            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
-        }
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
 
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 2rem;
-            z-index: 1;
-        }
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    z-index: 1;
+    box-sizing: border-box;
+}
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            text-align: center;
-        }
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        h1 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
+h1 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
 
-        .pin-display {
-            font-size: 1.8rem;
-            letter-spacing: 10px;
-            color: var(--primary);
-            margin: 1.5rem 0;
-            min-height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.pin-display {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    color: var(--primary);
+    margin: 1rem 0;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .pin-display span {
-            width: 20px;
-            margin: 0 5px;
-        }
+.pin-display span {
+    width: 16px;
+    margin: 0 4px;
+}
 
-        .keypad {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
 
-        .keypad-btn {
-            background: #f0f4f8;
-            border: none;
-            border-radius: 10px;
-            width: 100%;
-            aspect-ratio: 1;
-            font-size: 1.5rem;
-            color: var(--primary);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 500;
-        }
+.keypad-btn {
+    background: #f0f4f8;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 1;
+    font-size: 1.2rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    touch-action: manipulation;
+}
 
-        .keypad-btn:hover {
-            background: #e0e6ed;
-        }
+.keypad-btn:hover {
+    background: #e0e6ed;
+}
 
-        .keypad-btn:active {
-            transform: scale(0.95);
-        }
+.keypad-btn:active {
+    transform: scale(0.95);
+}
 
-        .control-btns {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+.action-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: manipulation;
+}
 
-        .action-btn {
-            background: var(--secondary);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-weight: 500;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+#delete-btn {
+    background: #e74c3c;
+}
 
-        #delete-btn {
-            background: #e74c3c;
-            flex: 0.5;
-        }
+#delete-btn:hover {
+    background: #c0392b;
+}
 
-        #delete-btn:hover {
-            background: #c0392b;
-        }
+#submit-btn {
+    background: var(--success);
+}
 
-        #submit-btn {
-            background: var(--success);
-            flex: 1.5;
-        }
+#submit-btn:hover {
+    background: #219955;
+}
 
-        #submit-btn:hover {
-            background: #219955;
-        }
+#message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 20px;
+    color: var(--accent);
+    font-weight: 500;
+}
 
-        #message {
-            margin-top: 1.5rem;
-            font-size: 1rem;
-            min-height: 24px;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .card {
-                padding: 1.5rem;
-            }
-        }
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    .keypad {
+        gap: 0.6rem;
+    }
+    
+    .keypad-btn {
+        font-size: 1.1rem;
+        border-radius: 6px;
+    }
+}
