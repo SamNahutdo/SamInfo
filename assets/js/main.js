@@ -84,12 +84,4 @@ sr.reveal(".qualification__footer-text, .contact__content", {
 sr.reveal(".qualification__footer .btn, .contact__btn", { origin: "right" });
 
 
-  async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-
-
-
-window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XXXXXXXXXX');
+ 
