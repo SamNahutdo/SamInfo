@@ -1,8 +1,3 @@
-
-
-
-
-
 const CORRECT_PIN = "218";
         let currentPin = "";
 
