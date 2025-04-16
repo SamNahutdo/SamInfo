@@ -695,9 +695,10 @@ grid-template-columns: repeat(3, 1fr);
     position: fixed;
     bottom: 20px;
     left: 185px;
-    width: 80%;
+    width: 50px; 
     height: 50px;
     z-index: 1000;
+    animation: float 6s ease-in-out infinite;
 }
 
 .terminal-logo img {
@@ -705,9 +706,48 @@ grid-template-columns: repeat(3, 1fr);
     height: 100%;
     object-fit: contain;
     cursor: pointer;
+    animation: spin 8s linear infinite;
     transition: transform 0.3s ease;
 }
 
 .terminal-logo img:hover {
-    transform: scale(1.1);
+    animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+.saturn-ring {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 3px solid rgba(0, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ring-rotate 6s linear infinite, ring-glow 2s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes ring-rotate {
+    from { transform: rotateX(60deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateZ(360deg); }
+}
+
+@keyframes ring-glow {
+    from {
+        border-color: rgba(0, 255, 255, 0.5);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+    to {
+        border-color: rgba(0, 255, 255, 0.9);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
