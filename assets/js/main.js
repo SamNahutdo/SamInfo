@@ -84,9 +84,12 @@ sr.reveal(".qualification__footer-text, .contact__content", {
 sr.reveal(".qualification__footer .btn, .contact__btn", { origin: "right" });
 
 
-  fetch('https://api.countapi.xyz/hit/sam-info.vercel.app/visits')
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('visitor-count').innerText = data.value;
-    });
+  async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
 
+
+
+window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
